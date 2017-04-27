@@ -1,0 +1,16 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+.validacion{
+  width: 20rem;
+  height: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10rem;
+  padding: 2rem;
+}
+.validacion input{
+  margin:1rem;
+}
