@@ -11,56 +11,61 @@
   <form class="validacion" action="index.html" method="post">
     <div>
       <label for="nombre">Nombre</label>
-      <input id="nombre" type="text">
+      <input id="nombre" type="text" required pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*">
       <span class="campo-vacio" style="display:none">Debe ingresar su nombre</span>
       <span class="validar-campo" style="display:none">La primera letra de su nombre debe ser con mayúscula</span>
     </div>
     <div>
       <label for="apellido">Apellido</label>
-      <input id="apellido" type="text" >
+      <input id="apellido" type="text" required pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*">
       <span class="campo-vacio" style="display:none">Debe ingresar su apellido</span>
-      <span class="validar-campo" style="display:none"></span>
+      <span class="validar-campo" style="display:none">La primera letra de su apellido debe ser con mayúscula</span>
+    </div>
+    <div>
+      <label for="dni">Número de DNI</label>
+      <input id="dni" type="text" required pattern="[0-9]{8}">
+      <span class="campo-vacio" style="display:none">Debe ingresar su número de DNI de 8 dígitos, ejemplo:"12345678"</span>
+      <span class="validar-campo" style="display:none">Solo se admiten 8 números</span>
     </div>
     <div>
       <label for="nacimiento">Fecha de nacimiento</label>
-      <input id="nacimiento" type="text">
+      <input id="nacimiento" type="date">
       <span class="campo-vacio" style="display:none">Debe ingresar su fecha de nacimiento, ejemplo: dd/mm/aaaa</span>
       <span class="validar-campo" style="display:none"></span>
     </div>
     <div>
       <label for="celular">Número de celular</label>
-      <input id="celular" type="text" >
-      <span class="campo-vacio" style="display:none">Ingrese su número de celular</span>
-      <span class="validar-campo"style="display:none"></span>
+      <input id="celular" type="text" required pattern="[0-9]{9}">
+      <span class="campo-vacio" style="display:none">Ingrese su número de celular de 9 dígitos</span>
+      <span class="validar-campo"style="display:none">"Ingrese solo números de 9 dígitos, ejemplo:123456789"</span>
     </div>
     <div>
       <label for="casa">Número de casa</label>
-      <input id="casa" type="text" >
-      <span class="campo-vacio" style="display:none">Ingrese su número de casa</span>
-      <span class="validar-campo" style="display:none"></span>
+      <input id="casa" type="text" required pattern="[0-9]{7}">
+      <span class="campo-vacio" style="display:none">Ingrese su número de casa de 7 dígitos</span>
+      <span class="validar-campo" style="display:none">"Ingrese solo números de 7 dígitos, ejemplo:1234567"</span>
     </div>
     <div>
       <label for="contraseña">Contraseña</label>
-      <input id="contraseña" type="text" placeholder="*****">
-      <span class="campo-vacio" style="display:none">Ingrese su contraseña</span>
-      <span class="validar-campo" style="display:none"></span>
+      <input id="contraseña" type="text" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" placeholder="*********">
+      <span class="campo-vacio" style="display:none">Ingrese su contraseña de entre 8 a 16 caracteres</span>
+      <span class="validar-campo" style="display:none">"La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula."</span>
     </div>
     <div>
       <label for="confirma-contraseña">Confirme contraseña</label>
-      <input id="confirma-contraseña" type="text" placeholder="*****">
+      <input id="confirma-contraseña" type="text" requiered placeholder="*********">
       <span class="campo-vacio" style="display:none">Vuelva a escribir su contraseña</span>
-      <span class="validar-campo" style="display:none"></span>
+      <span class="validar-campo" style="display:none">Las contraseñas no coinciden</span>
     </div>
     <div>
       <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="8"></textarea>
-      <span class="validar-campo" style="display:none"></span>
-      <span class="campo-vacio" style="display:none"></span>
+      <textarea id="mensaje" name="mensaje" rows="8" required></textarea>
+      <span class="campo-vacio" style="display:none">"Escriba un comentario"</span>
     </div>
     <div>
-      <input id="checkbox" type="checkbox">
+      <input id="checkbox" type="checkbox" required>
       <label for="checkbox">Acepto términos y condiciones</label>
-      <span class="campo-vacio" style="display:none"></span>
+      <span class="campo-vacio" style="display:none">"Es necesario aceptar las condiciones"</span>
     </div>
     <div>
       <input id="enviar" type="submit" name="Enviar"></input>

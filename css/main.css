@@ -31,6 +31,7 @@ body{
 }
 
 .validacion input[type="text"],
+.validacion input[type="date"],
 .validacion textarea{
   width: 295px;
   padding: 7px 6px;
@@ -38,6 +39,11 @@ body{
   resize: none;
   box-shadow: 0 0 3px #EEF5F7;
   margin: 5px 0;
+}
+
+.validacion input[type="date"]{
+  display: block;
+  width: 130px;
 }
 
 .validacion input[type="text"]:focus,
@@ -67,7 +73,7 @@ body{
   background-color: #272924;
   padding: 5px;
   position: absolute;
-  top: 15px;
+  top: 6px;
   left: 317px;
   width: 200px;
   color: white;
