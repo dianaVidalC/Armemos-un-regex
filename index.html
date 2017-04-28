@@ -9,16 +9,63 @@
 </head>
 <body>
   <form class="validacion" action="index.html" method="post">
-    <div><label for="nombre">Nombre</label><input id="nombre" type="text"><span style="display:none"></span></div>
-    <div><label for="apellido">Apellido</label><input id="apellido" type="text" ><span style="display:none"></span></div>
-    <div><label for="nacimiento">Fecha de nacimiento</label><input id="nacimiento" type="text"><span style="display:none"></span></div>
-    <div><label for="celular">Número de celular</label><input id="celular" type="text" ><span style="display:none"></span></div>
-    <div><label for="casa">Número de casa</label><input id="casa" type="text" ><span style="display:none"></span></div>
-    <div><label for="contraseña">Contraseña</label><input id="contraseña" type="text" placeholder="*****"><span style="display:none"></span></div>
-    <div><label for="confirma-contraseña">Confirme contraseña</label><input id="confirma-contraseña" type="text" placeholder="*****"><span style="display:none"></span></div>
-    <div><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="8"></textarea><span></span></div>
-    <div><input id="checkbox" type="checkbox"><label for="checkbox">Acepto términos y condiciones</label><span style="display:none"></span></div>
-    <div><input type="submit" name="Enviar"></input></div>
+    <div>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text">
+      <span class="campo-vacio" style="display:none">Debe ingresar su nombre</span>
+      <span class="validar-campo" style="display:none">La primera letra de su nombre debe ser con mayúscula</span>
+    </div>
+    <div>
+      <label for="apellido">Apellido</label>
+      <input id="apellido" type="text" >
+      <span class="campo-vacio" style="display:none">Debe ingresar su apellido</span>
+      <span class="validar-campo" style="display:none"></span>
+    </div>
+    <div>
+      <label for="nacimiento">Fecha de nacimiento</label>
+      <input id="nacimiento" type="text">
+      <span class="campo-vacio" style="display:none">Debe ingresar su fecha de nacimiento, ejemplo: dd/mm/aaaa</span>
+      <span class="validar-campo" style="display:none"></span>
+    </div>
+    <div>
+      <label for="celular">Número de celular</label>
+      <input id="celular" type="text" >
+      <span class="campo-vacio" style="display:none">Ingrese su número de celular</span>
+      <span class="validar-campo"style="display:none"></span>
+    </div>
+    <div>
+      <label for="casa">Número de casa</label>
+      <input id="casa" type="text" >
+      <span class="campo-vacio" style="display:none">Ingrese su número de casa</span>
+      <span class="validar-campo" style="display:none"></span>
+    </div>
+    <div>
+      <label for="contraseña">Contraseña</label>
+      <input id="contraseña" type="text" placeholder="*****">
+      <span class="campo-vacio" style="display:none">Ingrese su contraseña</span>
+      <span class="validar-campo" style="display:none"></span>
+    </div>
+    <div>
+      <label for="confirma-contraseña">Confirme contraseña</label>
+      <input id="confirma-contraseña" type="text" placeholder="*****">
+      <span class="campo-vacio" style="display:none">Vuelva a escribir su contraseña</span>
+      <span class="validar-campo" style="display:none"></span>
+    </div>
+    <div>
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="8"></textarea>
+      <span class="validar-campo" style="display:none"></span>
+      <span class="campo-vacio" style="display:none"></span>
+    </div>
+    <div>
+      <input id="checkbox" type="checkbox">
+      <label for="checkbox">Acepto términos y condiciones</label>
+      <span class="campo-vacio" style="display:none"></span>
+    </div>
+    <div>
+      <input id="enviar" type="submit" name="Enviar"></input>
+    </div>
   </form>
+  <script src="js/app.js" type="text/javascript"></script>
 </body>
 </html>
